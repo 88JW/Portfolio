@@ -1,22 +1,22 @@
 .nav-links {
-  border: 2px solid rgba(204, 204, 204, 0.5); /* Add opacity to the border */
-  border-radius: 10px; /* Rounded corners */
-  width: 100%; /* Full width */
+  border: 2px solid rgba(204, 204, 204, 0.5);
+  border-radius: 10px; 
+  width: 100%; 
   display: flex;
   justify-content: space-around;
-  padding: 10px 20px; /* Add padding to the left and right */
+  padding: 10px 20px; 
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
 }
 
 .nav-links a {
-  color: inherit; /* Match link color to the text color of the page */
-  text-decoration: none; /* Ensure no underline */
+  color: inherit; 
+  text-decoration: none; 
 }
 
 .nav-links a:hover {
-  text-decoration: none; /* Remove underline on hover */
+  text-decoration: none; 
 }
 
 .name {
@@ -31,5 +31,81 @@
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
-  color: #fff; /* Change text color to match the background color of the page */
+  color: #fff; 
+}
+
+.job-title {
+  text-transform: uppercase;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  font-size: 3em; 
+  line-height: 1.25; 
+  white-space: pre-line; 
+  letter-spacing: 0.1em; 
+}
+
+.job-title.fade-out {
+  opacity: 0;
+}
+
+.job-title.fade-in {
+  opacity: 1;
+}
+
+.job-description {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-description .job-title {
+  position: static;
+  width: 100%; 
+  text-align: left;
+}
+
+.job-description .job-title.fade-out {
+  opacity: 0;
+}
+
+.job-description:hover .job-title {
+  transform: none; /* Remove scaling effect */
+}
+
+.left-section {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  max-width: 85%;
+  height: auto;
+  border-radius: 15%;
+  margin: 0 10px;
+  position: relative;
+}
+
+.profile-photo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Add dark overlay */
+  border-radius: 15%;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 1em;
+  text-align: center;
+  color: #ccc;
 }
