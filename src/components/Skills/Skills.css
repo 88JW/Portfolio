@@ -2,3 +2,45 @@
   padding: 20px;
   background-color: #111723;
 }
+
+#skills h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  /* background-color: rgba(0, 0, 0, 0.7); Make background semi-transparent */
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -25%; /* Position the tooltip below the icon */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.9em; /* Make text smaller */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

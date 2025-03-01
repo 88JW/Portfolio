@@ -2,3 +2,17 @@
   padding: 20px;
   background-color: #111723;
 }
+
+#contact h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.center-text {
+  text-align: center;
+}

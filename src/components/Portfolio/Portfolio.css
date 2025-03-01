@@ -2,3 +2,35 @@
   padding: 20px;
   background-color: #111723;
 }
+
+#portfolio h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.portfolio-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-content, .right-content {
+  flex: 1;
+}
+
+.portfolio-image {
+  max-width: 85%;
+  height: auto;
+  border-radius: 15%;
+  margin: 0 10px;
+  position: relative;
+}
