@@ -1,0 +1,35 @@
+.nav-links {
+  border: 2px solid rgba(204, 204, 204, 0.5); /* Add opacity to the border */
+  border-radius: 10px; /* Rounded corners */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px; /* Add padding to the left and right */
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  color: inherit; /* Match link color to the text color of the page */
+  text-decoration: none; /* Ensure no underline */
+}
+
+.nav-links a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.name {
+  margin-right: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.language-switch {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff; /* Change text color to match the background color of the page */
+}
