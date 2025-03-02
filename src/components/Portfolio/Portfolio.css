@@ -1,6 +1,10 @@
 #portfolio {
+  position: relative;
   padding: 20px;
   background-color: #111723;
+  overflow: hidden;
+  z-index: 1; /* Ensure the section content is above the background image */
+  border-top: 2px solid rgba(224, 224, 224, 0.5); /* Add transparent top border */
 }
 
 #portfolio h2 {

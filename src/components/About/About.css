@@ -1,12 +1,31 @@
 #about {
-  padding: 20px;
+  position: relative;
+  padding: 40px; /* Increased padding */
   background-color: #111723;
+  overflow: hidden;
+  z-index: 1; /* Ensure the section content is above the background image */
+  border-top: 2px solid rgba(224, 224, 224, 0.5); /* Add transparent top border */
+}
+
+#about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/1.png');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(40%) blur(1px);
+  z-index: -1; /* Ensure the background image is below the section content */
 }
 
 #about h2 {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-bottom: 20px; /* Added bottom margin */
 }
 
 .align-left {
@@ -22,6 +41,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 20px; /* Added gap between flex items */
 }
 
 .left-content {
@@ -45,12 +65,13 @@
 }
 
 .card {
-  padding: 20px;
+  padding: 50px; /* Increased padding */
   border: 1px solid #e0e0e0;  
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(240, 239, 239, 0.1);
   width: 65%;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Increased bottom margin */
+  background-color: rgba(17, 23, 35, 0.5); /* Added opacity to background color */
 }
 
 .card-left {
