@@ -5,12 +5,12 @@ import { SiTypescript, SiVite, SiPwa, SiRedux, SiAdobephotoshop, SiSpine, SiCanv
 import { BiLogoNetlify } from 'react-icons/bi';
 import { DiScrum } from 'react-icons/di';
 
-function Skills() {
+function Skills({ translations }) {
   return (
     <section id="skills" className="align-left">
-      <h2>Skills</h2>
+      <h2>{translations.skillsHeader}</h2>
       <div className="center-text">
-        <p>The skills, tools, and technologies I use:</p>
+        <p>{translations.skills1}</p>
         <div className="skills-icons">
           <div className="tooltip">
             <FaHtml5 size={75} style={{ margin: '10px', fill: 'url(#gradient)' }} />

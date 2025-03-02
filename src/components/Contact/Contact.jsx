@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Contact.css'; // Import the CSS file for styling
 import { FaLinkedin, FaFacebook, FaInstagram, FaGithub, FaFlickr, FaCopy } from 'react-icons/fa'; // Import social media icons
 
-function Contact() {
+function Contact({ translations }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,13 +29,13 @@ function Contact() {
     const { name, email, message } = formData;
     let formErrors = {};
 
-    if (!name) formErrors.name = 'Name is required';
+    if (!name) formErrors.name = translations.nameRequired;
     if (!email) {
-      formErrors.email = 'Email is required';
+      formErrors.email = translations.emailRequired;
     } else if (!validateEmail(email)) {
-      formErrors.email = 'Email is not valid';
+      formErrors.email = translations.emailInvalid;
     }
-    if (!message) formErrors.message = 'Message is required';
+    if (!message) formErrors.message = translations.messageRequired;
 
     if (Object.keys(formErrors).length === 0) {
       // Send email
@@ -48,15 +48,15 @@ function Contact() {
 
   const copyEmail = () => {
     navigator.clipboard.writeText('wojciech.t.jaskula@gmail.com');
-    alert('Email copied to clipboard!');
+    alert(translations.emailCopied);
   };
 
   return (
     <section id="contact">
-      <h2 className="align-left">Contact</h2>
+      <h2 className="align-left">{translations.contactHeader}</h2>
       <div className="container">
         <div className="left-section">
-          <p>Feel free to reach out to me via email or through my social media profiles:</p>
+          <p>{translations.contact1}</p>
           <div className="social-icons">
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
@@ -64,24 +64,26 @@ function Contact() {
             <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
             <a href="https://www.flickr.com" target="_blank" rel="noopener noreferrer"><FaFlickr /></a>
           </div>
-          <p>If you prefer not to use the contact form, here is my email:</p>
+          <p>{translations.contact2}</p>
           <p>wojciech.t.jaskula@gmail.com <button onClick={copyEmail}><FaCopy /></button></p>
+          <p>{translations.contact3}</p>
         </div>
+
         <div className="right-section">
           <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="name">{translations.emailName}:</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
             {errors.name && <p className="error">{errors.name}</p>}
 
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">{translations.email}:</label>
             <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
             {errors.email && <p className="error">{errors.email}</p>}
 
-            <label htmlFor="message">Message:</label>
+            <label htmlFor="message">{translations.message}:</label>
             <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange} required></textarea>
             {errors.message && <p className="error">{errors.message}</p>}
 
-            <button type="submit">Send</button>
+            <button type="submit">{translations.send}</button>
           </form>
         </div>
       </div>

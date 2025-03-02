@@ -2,14 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './Header.css'; 
 import profilePhoto from '../../assets/cd9c1533-de8f-4297-9158-ab548c1c3e81.png'; 
 
-function Header() {
-  const [language, setLanguage] = useState('EN');
+function Header({ language, onLanguageChange, translations }) {
   const [jobDescription, setJobDescription] = useState('Frontend Developer');
   const [fade, setFade] = useState(false);
-
-  const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === 'EN' ? 'PL' : 'EN'));
-  };
 
   const toggleJobDescription = () => {
     setFade(true);
@@ -32,13 +27,15 @@ function Header() {
         <div className="name">
           <p>Wojciech Jaskuła</p>
         </div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <button className="language-switch" onClick={toggleLanguage}>
-          {language}
-        </button>
+        <a href="#about">{translations.about}</a>
+        <a href="#skills">{translations.skills}</a>
+        <a href="#portfolio">{translations.portfolio}</a>
+        <a href="#contact">{translations.contact}</a>
+        <select className="language-switch" onChange={(e) => onLanguageChange(e.target.value)} value={language}>
+          <option value="en">EN</option>
+          <option value="pl">PL</option>
+          <option value="de">DE</option>
+        </select>
       </nav>
       <div className="job-description">
         <div className="left-section">
@@ -47,14 +44,13 @@ function Header() {
               <span key={index}>{word}<br /></span>
             ))}
           </h1>
-          <p className="description">Jestem Wojtek - Front-end developer / game designer, ciesze się że trafileś na moją stronę.</p>
+          <p className="description">{translations.description}</p>
         </div>
         <div className="right-section">
           <img src={profilePhoto} alt="Your Name" className="profile-photo" />
         </div>
       </div>
     </header>
-    
   );
 }
 
