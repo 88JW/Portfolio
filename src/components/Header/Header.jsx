@@ -27,10 +27,10 @@ function Header({ language, onLanguageChange, translations }) {
         <div className="name">
           <p>Wojciech Jaskuła</p>
         </div>
-        <a href="#about">{translations.about}</a>
-        <a href="#skills">{translations.skills}</a>
-        <a href="#portfolio">{translations.portfolio}</a>
-        <a href="#contact">{translations.contact}</a>
+        <a href="#about" className="nav-link">{translations.about}</a>
+        <a href="#skills" className="nav-link">{translations.skills}</a>
+        <a href="#portfolio" className="nav-link">{translations.portfolio}</a>
+        <a href="#contact" className="nav-link">{translations.contact}</a>
         <div className="language-switch-container">
           <div className="language-dropdown">
             <button className="language-dropdown-button">

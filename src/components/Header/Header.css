@@ -22,6 +22,17 @@
   position: relative;
 }
 
+.nav-link {
+  display: inline-block; /* Ensure consistent block behavior */
+  padding: 5px 20px; /* Set padding to avoid size change on hover */
+  border-radius: 5px; /* Add some rounding to the background */
+  transition: background 1s ease; /* Slow down the transition for smooth appearance */
+}
+
+.nav-link:hover {
+  background: radial-gradient(circle, #e92c8c 0%, rgba(233, 44, 140, 0.5) 10%, transparent 100%); /* Smoother gradient transition */
+  /* Remove padding change to prevent size shift */
+}
 
 .name {
   margin-right: 20px;
@@ -114,9 +125,6 @@
   text-align: left;
   
 }
-
-
-
 
 .job-description .job-title.fade-out {
   opacity: 0;
