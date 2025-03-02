@@ -27,32 +27,59 @@
   margin-right: 20px;
   font-size: 1.2em;
   font-weight: bold;
-  
-}
-
-.language-switch-container {
-  display: flex;
-  align-items: center;
-  margin-left: 10px; /* Adjust as needed */
-  height: 100%; /* Ensure it takes the full height of the nav */
-}
-
-.language-switch {
-  background-color: #2285d7; /* Green background */
-  border: none; /* Remove border */
-  color: white; /* White text */
-  padding: 10px 20px; /* Some padding */
-  text-align: center; /* Centered text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Make the container inline-block */
-  font-size: 16px; /* Increase font size */
-  margin: 4px 2px; /* Some margin */
-  cursor: pointer; /* Pointer/hand icon */
-  border-radius: 8px; /* Rounded corners */
-  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 
+.language-dropdown-button {
+  background: linear-gradient(to right, #007BFF, #673ab7); /* Gradient background */
+  color: white;
+  padding: 8px 12px; /* Smaller padding */
+  border: none;
+  cursor: pointer;
+  border-radius: 20px; /* More rounded corners */
+  font-size: 14px; /* Slightly smaller font */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.language-dropdown-button:hover {
+  background: linear-gradient(to right, #673ab7, #007BFF); /* Reverse gradient on hover */
+}
+
+.language-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  min-width: 100px; /* Slightly smaller width */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); /* Lighter shadow */
+  z-index: 1;
+  right: 0;
+  border-radius: 10px; /* Rounded corners */
+  padding: 5px 0; /* Add some padding */
+}
+
+.language-dropdown-content a {
+  color: #333;
+  padding: 8px 16px; /* Smaller padding */
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color */
+  font-size: 14px; /* Match font size with button */
+}
+
+.language-dropdown-content a:hover {
+  background-color: rgba(103, 58, 183, 0.1); /* Light purple on hover */
+  color: #673ab7; /* Darker text on hover */
+}
+
+.language-dropdown:hover .language-dropdown-content {
+  display: block;
+}
+
+.language-dropdown-content a:last-child {
+  border-bottom: none;
+}
 
 .job-title {
   text-transform: uppercase;
@@ -61,8 +88,7 @@
   font-size: 3em; 
   line-height: 1.25; 
   white-space: pre-line; 
-  letter-spacing: 0.1em; 
-  
+  letter-spacing: 0.1em;   
 }
 
 .job-title.fade-out {
@@ -78,8 +104,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 60px;
 }
 
 .job-description .job-title {

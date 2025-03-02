@@ -32,12 +32,17 @@ function Header({ language, onLanguageChange, translations }) {
         <a href="#portfolio">{translations.portfolio}</a>
         <a href="#contact">{translations.contact}</a>
         <div className="language-switch-container">
-          <select className="language-switch" onChange={(e) => onLanguageChange(e.target.value)} value={language}>
-            <option value="en">EN</option>
-            <option value="pl">PL</option>
-            <option value="de">DE</option>
-          </select>
-      </div>
+          <div className="language-dropdown">
+            <button className="language-dropdown-button">
+              {language.toUpperCase()}
+            </button>
+            <div className="language-dropdown-content">
+              <a href="#" onClick={() => onLanguageChange('en')}>EN</a>
+              <a href="#" onClick={() => onLanguageChange('pl')}>PL</a>
+              <a href="#" onClick={() => onLanguageChange('de')}>DE</a>
+            </div>
+          </div>
+        </div>
       </nav>
       <div className="job-description">
         <div className="left-section">

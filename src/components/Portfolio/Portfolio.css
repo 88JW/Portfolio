@@ -43,3 +43,75 @@
   margin: 0 10px;
   position: relative;
 }
+
+.portfolio-link {
+  background: linear-gradient(to right, #007BFF, #b73a87); /* Gradient background */
+  color: white;
+  padding: 8px 12px; /* Smaller padding */
+  border: none;
+  cursor: pointer;
+  border-radius: 20px; /* More rounded corners */
+  font-size: 14px; /* Slightly smaller font */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensure it behaves like a button */
+}
+
+.portfolio-link:hover {
+  background: linear-gradient(to right, #673ab7, #007BFF); /* Reverse gradient on hover */
+  color: white; /* Ensure text color remains white on hover */
+}
+
+.portfolio-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.portfolio-card {
+
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid rgba(224, 224, 224, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.portfolio-card-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #444;
+}
+
+.portfolio-card p {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.portfolio-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.center-buttons {
+  justify-content: center;
+}
+
+.subtle-button {
+  background: none;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.subtle-button:hover {
+  background-color: #007BFF;
+  color: white;
+}
