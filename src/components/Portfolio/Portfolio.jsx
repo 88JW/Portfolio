@@ -12,8 +12,8 @@ function Portfolio({ translations }) {
         </div>
         <div className="right-content">
           <p>{translations.portfolio1}</p>
-          <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify Link 1</a>
-          <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify Link 2</a>
+          <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>
           <p>{translations.portfolio2}</p>
           <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify Link 3</a>
           <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify Link 4</a>

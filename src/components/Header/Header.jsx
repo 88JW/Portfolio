@@ -31,11 +31,13 @@ function Header({ language, onLanguageChange, translations }) {
         <a href="#skills">{translations.skills}</a>
         <a href="#portfolio">{translations.portfolio}</a>
         <a href="#contact">{translations.contact}</a>
-        <select className="language-switch" onChange={(e) => onLanguageChange(e.target.value)} value={language}>
-          <option value="en">EN</option>
-          <option value="pl">PL</option>
-          <option value="de">DE</option>
-        </select>
+        <div className="language-switch-container">
+          <select className="language-switch" onChange={(e) => onLanguageChange(e.target.value)} value={language}>
+            <option value="en">EN</option>
+            <option value="pl">PL</option>
+            <option value="de">DE</option>
+          </select>
+      </div>
       </nav>
       <div className="job-description">
         <div className="left-section">
