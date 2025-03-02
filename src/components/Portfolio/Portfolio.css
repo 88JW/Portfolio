@@ -130,7 +130,33 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.subtle-button:hover {
-  background-color: #007BFF;
-  color: white;
+
+@media (max-width: 768px) {
+  .portfolio-content {
+    flex-direction: column; /* Stack portfolio content vertically */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
+  }
+
+  .left-content {
+    display: none; /* Hide the left content area on mobile devices */
+  }
+
+  .portfolio-links {
+    grid-template-columns: 1fr; /* Make links stack vertically */
+    gap: 10px; /* Add space between links */
+  }
+
+  .portfolio-card {
+    width: 100%; /* Make project cards take full width */
+    margin-bottom: 20px; /* Add space between project cards */
+  }
+
+  .portfolio-card p {
+    text-align: center; /* Center text in project cards */
+  }
+
+  .portfolio-buttons {
+    justify-content: center; /* Center buttons */
+  }
 }

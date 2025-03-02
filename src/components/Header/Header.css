@@ -40,6 +40,9 @@
   font-weight: bold;
 }
 
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
 .language-dropdown-button {
   background: linear-gradient(to right, #007BFF, #673ab7); /* Gradient background */
@@ -100,6 +103,7 @@
   line-height: 1.25; 
   white-space: pre-line; 
   letter-spacing: 0.1em;   
+  overflow-wrap: break-word; /* Ensure text wraps within the container */
 }
 
 .job-title.fade-out {
@@ -186,4 +190,105 @@
   text-align: center;
   color: #ccc;
   
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #111723;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .right-section {
+    display: none; /* Hide the right section on mobile devices */
+  }
+
+  .job-title {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+
+  .job-description {
+    flex-direction: column; /* Stack job description sections vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .left-section {
+    width: 95%; /* Make sections take full width */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Add padding for spacing */
+    
+  }
+
+  .profile-photo {
+    max-width: 100%; /* Make profile photo take full width */
+  }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .language-switch-container {
+    width: 100%;
+  }
+
+  .language-dropdown-button {
+    width: 100%;
+  }
 }

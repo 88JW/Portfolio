@@ -31,13 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  background: #1d2331;
-  margin: 2rem 0;
-  width: 100%;
-}
+
 
 section {
   padding: 20px;
@@ -54,7 +48,7 @@ h2 {
 @media (max-width: 768px) {
   #root {
     max-width: 100%; /* Full width on mobile screens */
-    padding: 1rem;
+    padding: 0rem;
   }
 }
 

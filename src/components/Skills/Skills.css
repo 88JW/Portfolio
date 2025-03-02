@@ -65,3 +65,16 @@
   visibility: visible;
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column; /* Stack skills content vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .left-content, .right-content {
+    width: 100%; /* Make content sections take full width */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Add padding for spacing */
+  }
+}

@@ -91,3 +91,24 @@
 .card p {
   margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack about content vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .left-content, .right-content {
+    width: 100%; /* Make content sections take full width */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Add padding for spacing */
+  }
+
+  #about::before {
+    left: -20px;
+    right: -20px;
+    width: calc(100% + 40px);
+    background-size: cover;
+    background-position: center;
+  }
+}
