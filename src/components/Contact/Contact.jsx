@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css'; // Import the CSS file for styling
-import { FaLinkedin, FaFacebook, FaInstagram, FaGithub, FaFlickr, FaCopy } from 'react-icons/fa'; // Import social media icons
+import { FaLinkedin, FaFacebook, FaInstagram, FaFlickr, FaCopy } from 'react-icons/fa'; // Import social media icons
 
 function Contact({ translations }) {
   const [formData, setFormData] = useState({
@@ -57,12 +57,11 @@ function Contact({ translations }) {
       <div className="container">
         <div className="left-section">
           <p>{translations.contact1}</p>
-          <div className="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-            <a href="https://www.flickr.com" target="_blank" rel="noopener noreferrer"><FaFlickr /></a>
+          <div className="social-icons" style={{ color: 'white', fontSize: '2rem' }}>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '10px' }} className="social-icon"><FaLinkedin /></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '10px' }} className="social-icon"><FaFacebook /></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '10px' }} className="social-icon"><FaInstagram /></a>
+            <a href="https://www.flickr.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '10px' }} className="social-icon"><FaFlickr /></a>
           </div>
           <p>{translations.contact2}</p>
           <p>wojciech.t.jaskula@gmail.com <button onClick={copyEmail}><FaCopy /></button></p>

@@ -88,3 +88,14 @@
 #contact .right-section {
   max-width: 45%;
 }
+
+.social-icons .social-icon {
+  transition: all 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+}
