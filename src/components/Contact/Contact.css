@@ -36,9 +36,17 @@
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Reduced border opacity */
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: #111723;/* Match background color with opacity */
+  color: white; /* Ensure text is visible */                   
+}
+
+#contact input[type="text"]::placeholder,
+#contact input[type="email"]::placeholder,
+#contact textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
 }
 
 #contact textarea {
@@ -55,6 +63,7 @@
   font-size: 14px; /* Slightly smaller font */
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  opacity: 0.9; /* Add opacity */
 }
 
 #contact button:hover {
@@ -82,18 +91,18 @@
 }
 
 #contact .left-section {
-  max-width: 45%;
+  max-width: 40%; /* Reduced width */
 }
 
 #contact .right-section {
-  max-width: 45%;
+  max-width: 40%; /* Reduced width */
 }
 
 .social-icons .social-icon {
   transition: all 0.3s ease;
 }
 
-.social-icons .social-icon:hover {
+social-icons .social-icon:hover {
   background: linear-gradient(45deg, #ff6b6b, #f06595);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
