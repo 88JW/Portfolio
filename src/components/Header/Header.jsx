@@ -22,7 +22,7 @@ function Header({ language, onLanguageChange, translations }) {
   }, []);
 
   return (
-    <header>
+    <header className='header'>
       <nav className="nav-links">
         <div className="name">
           <p>Wojciech Jaskuła</p>
@@ -45,6 +45,7 @@ function Header({ language, onLanguageChange, translations }) {
             ))}
           </h1>
           <p className="description">{translations.description}</p>
+          <p className="description">{translations.description2}</p>
         </div>
         <div className="right-section">
           <img src={profilePhoto} alt="Your Name" className="profile-photo" />

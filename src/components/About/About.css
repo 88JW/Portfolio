@@ -1,10 +1,11 @@
 #about {
   position: relative;
-  padding: 40px; /* Increased padding */
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #111723;
   overflow: hidden;
-  z-index: 1; /* Ensure the section content is above the background image */
-  border-top: 2px solid rgba(224, 224, 224, 0.5); /* Add transparent top border */
+  z-index: 1; 
+  border-top: 2px solid rgba(224, 224, 224, 0.5); 
 }
 
 #about::before {
@@ -18,14 +19,14 @@
   background-size: cover;
   background-position: center;
   filter: brightness(40%) blur(1px);
-  z-index: -1; /* Ensure the background image is below the section content */
+  z-index: -1; 
 }
 
 #about h2 {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 20px; /* Added bottom margin */
+  margin-bottom: 20px;
 }
 
 .align-left {

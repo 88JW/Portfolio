@@ -1,3 +1,4 @@
+
 .nav-links {
   border: 2px solid rgba(204, 204, 204, 0.5);
   border-radius: 10px; 
@@ -8,6 +9,7 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .nav-links a {
@@ -23,10 +25,11 @@
   margin-right: 20px;
   font-size: 1.2em;
   font-weight: bold;
+  
 }
 
 .language-switch {
-  background-color: #f0f0f0;
+  background-color: #969696;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px 10px;
@@ -42,6 +45,7 @@
   line-height: 1.25; 
   white-space: pre-line; 
   letter-spacing: 0.1em; 
+  
 }
 
 .job-title.fade-out {
@@ -57,6 +61,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .job-description .job-title {
@@ -108,4 +114,5 @@
   font-size: 1em;
   text-align: center;
   color: #ccc;
+  
 }
