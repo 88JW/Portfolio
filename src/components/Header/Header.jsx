@@ -6,7 +6,6 @@ function Header({ language, onLanguageChange, translations }) {
   const [jobDescription, setJobDescription] = useState('Frontend Developer');
   const [fade, setFade] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleJobDescription = () => {
     setFade(true);
@@ -27,14 +26,9 @@ function Header({ language, onLanguageChange, translations }) {
     setMenuOpen(!menuOpen);
   };
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
   const handleLanguageChange = (lang) => {
     onLanguageChange(lang);
     setMenuOpen(false);
-    setDropdownOpen(false);
   };
 
   return (
@@ -48,15 +42,25 @@ function Header({ language, onLanguageChange, translations }) {
         <a href="#portfolio" onClick={() => setMenuOpen(false)}>{translations.portfolio}</a>
         <a href="#contact" onClick={() => setMenuOpen(false)}>{translations.contact}</a>
         <div className="language-switch-container">
-          <div className="language-dropdown">
-            <button className="language-dropdown-button" onClick={toggleDropdown}>
-              {language.toUpperCase()}
+          <div className="language-buttons">
+            <button 
+              className={`language-button pl ${language === 'pl' ? 'active' : 'inactive'}`} 
+              onClick={() => handleLanguageChange('pl')}
+            >
+              PL
             </button>
-            <div className={`language-dropdown-content ${dropdownOpen ? 'open' : ''}`}>
-              <a href="#" onClick={() => handleLanguageChange('en')}>EN</a>
-              <a href="#" onClick={() => handleLanguageChange('pl')}>PL</a>
-              <a href="#" onClick={() => handleLanguageChange('de')}>DE</a>
-            </div>
+            <button 
+              className={`language-button de ${language === 'de' ? 'active' : 'inactive'}`} 
+              onClick={() => handleLanguageChange('de')}
+            >
+              DE
+            </button>
+            <button 
+              className={`language-button en ${language === 'en' ? 'active' : 'inactive'}`} 
+              onClick={() => handleLanguageChange('en')}
+            >
+              EN
+            </button>
           </div>
         </div>
       </nav>
