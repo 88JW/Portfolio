@@ -4,8 +4,8 @@
   padding-bottom: 80px;
   background-color: #111723;
   overflow: hidden;
-  z-index: 1; /* Ensure the section content is above the background image */
-  border-top: 2px solid rgba(224, 224, 224, 0.5); /* Add transparent top border */
+  z-index: 1;
+  border-top: 2px solid rgba(224, 224, 224, 0.5);
 }
 
 #portfolio::before {
@@ -19,9 +19,9 @@
   background-size: cover;
   background-position: center;
   filter: brightness(40%) blur(0px);
-  z-index: -1; 
-
+  z-index: -1;
 }
+
 #portfolio h2 {
   font-size: 2em;
   text-transform: uppercase;
@@ -40,7 +40,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .left-content, .right-content {
@@ -56,23 +55,22 @@
 }
 
 .portfolio-link {
-  background: linear-gradient(to right, #007BFF, #b73a87); /* Gradient background */
+  background: linear-gradient(to right, #007BFF, #b73a87);
   color: white;
-  padding: 8px 12px; /* Smaller padding */
+  padding: 8px 12px;
   border: none;
   cursor: pointer;
-  border-radius: 20px; /* More rounded corners */
-  font-size: 14px; /* Slightly smaller font */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Ensure it behaves like a button */
-  
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .portfolio-link:hover {
-  background: linear-gradient(to right, #673ab7, #007BFF); /* Reverse gradient on hover */
-  color: white; /* Ensure text color remains white on hover */
+  background: linear-gradient(to right, #673ab7, #007BFF);
+  color: white;
 }
 
 .portfolio-links {
@@ -82,7 +80,6 @@
 }
 
 .portfolio-card {
-
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
@@ -91,18 +88,16 @@
   background-color: rgba(17, 23, 35, 0.5);
 }
 
-
-
 .portfolio-card-image {
   width: 100%;
   height: auto;
   border-bottom: 1px solid #444;
-  filter: grayscale(100%) sepia(1) hue-rotate(190deg) saturate(0.5); /* Apply color filter */
-  transition: filter 0.3s ease; /* Smooth transition */
+  filter: grayscale(100%) sepia(1) hue-rotate(190deg) saturate(0.5);
+  transition: filter 0.3s ease;
 }
 
 .portfolio-card-image:hover {
-  filter: none; /* Show original color on hover */
+  filter: none;
 }
 
 .portfolio-card p {
@@ -130,33 +125,32 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 @media (max-width: 768px) {
   .portfolio-content {
-    flex-direction: column; /* Stack portfolio content vertically */
-    align-items: center; /* Center align items */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .left-content {
-    display: none; /* Hide the left content area on mobile devices */
+    display: none;
   }
 
   .portfolio-links {
-    grid-template-columns: 1fr; /* Make links stack vertically */
-    gap: 10px; /* Add space between links */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .portfolio-card {
-    width: 100%; /* Make project cards take full width */
-    margin-bottom: 20px; /* Add space between project cards */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .portfolio-card p {
-    text-align: center; /* Center text in project cards */
+    text-align: center;
   }
 
   .portfolio-buttons {
-    justify-content: center; /* Center buttons */
+    justify-content: center;
   }
 }

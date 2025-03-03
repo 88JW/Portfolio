@@ -5,8 +5,7 @@
   background-color: #111723;
   overflow: hidden;
   z-index: 1; 
-  border-top: 2px solid rgba(224, 224, 224, 0.5); /* Add transparent top border */
-
+  border-top: 2px solid rgba(224, 224, 224, 0.5);
 }
 
 #skills::before {
@@ -20,8 +19,7 @@
   background-size: cover;
   background-position: center;
   filter: brightness(40%) blur(1px);
-  z-index: -1; /* Ensure the background image is below the section content */
-
+  z-index: -1;
 }
 
 #skills h2 {
@@ -46,19 +44,18 @@
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  /* background-color: rgba(0, 0, 0, 0.7); Make background semi-transparent */
   color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: -10%; /* Position the tooltip below the icon */
+  bottom: -10%;
   left: 50%;
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
-  font-size: 0.9em; /* Make text smaller */
+  font-size: 0.9em;
 }
 
 .tooltip:hover .tooltiptext {
@@ -68,13 +65,13 @@
 
 @media (max-width: 768px) {
   .skills-content {
-    flex-direction: column; /* Stack skills content vertically */
-    align-items: center; /* Center align items */
+    flex-direction: column;
+    align-items: center;
   }
 
   .left-content, .right-content {
-    width: 100%; /* Make content sections take full width */
-    text-align: center; /* Center align text */
-    padding: 10px 0; /* Add padding for spacing */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
   }
 }
