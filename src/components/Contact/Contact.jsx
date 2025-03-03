@@ -10,15 +10,15 @@ function Contact({ translations }) {
       <div className="container">
         <div className="left-section">
           <p>{translations.contact1}</p>
-          <div className="social-icons" style={{ color: 'white', fontSize: '2rem' }}>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '10px' }} className="social-icon"><FaLinkedin /></a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '10px' }} className="social-icon"><FaFacebook /></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '10px' }} className="social-icon"><FaInstagram /></a>
-            <a href="https://www.flickr.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', marginRight: '10px' }} className="social-icon"><FaFlickr /></a>
+          <div className="social-icons" style={{ fill: 'url(#gradient)', fontSize: '2rem' }}>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" style={{ fill: 'url(#gradient)', marginRight: '10px' }} className="social-icon"><FaLinkedin /></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ fill: 'url(#gradient)', marginRight: '10px' }} className="social-icon"><FaFacebook /></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ fill: 'url(#gradient)', marginRight: '10px' }} className="social-icon"><FaInstagram /></a>
+            <a href="https://www.flickr.com" target="_blank" rel="noopener noreferrer" style={{ fill: 'url(#gradient)', marginRight: '10px' }} className="social-icon"><FaFlickr /></a>
           </div>
           {/* <p>{translations.contact2}</p> */}
           <p>wojciech.t.jaskula@gmail.com 
-            <button><FaCopy /></button></p>
+            <button style={{marginLeft:"10px"}}><FaCopy /></button></p>
           <p>{translations.contact3}</p>
         </div>
 
