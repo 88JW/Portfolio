@@ -1,5 +1,5 @@
 import React from 'react';
-import './Skills.css'; // Import the CSS file for styling
+import './Skills.css'; 
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaJira, FaBitbucket } from 'react-icons/fa';
 import { SiTypescript, SiVite, SiPwa, SiRedux, SiAdobephotoshop, SiSpine, SiCanva } from 'react-icons/si';
 import { BiLogoNetlify } from 'react-icons/bi';

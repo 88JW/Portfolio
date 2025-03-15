@@ -1,6 +1,6 @@
 import React from 'react';
-import './Portfolio.css'; // Import the CSS file for styling
-import portfolioImage from '../../assets/5b8bc420-106e-4bd3-a841-af781953b0ae.png'; // Import the image
+import './Portfolio.css'; 
+import portfolioImage from '../../assets/5b8bc420-106e-4bd3-a841-af781953b0ae.png'; 
 
 function Portfolio({ translations }) {
   return (

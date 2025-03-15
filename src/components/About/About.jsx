@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css'; // Import the CSS file for styling
+import './About.css';
 
 function About({ translations }) {
   return (
@@ -20,7 +20,6 @@ function About({ translations }) {
               <h4>{translations.aboutMe3head}</h4>
               <p>{translations.aboutMe3}</p>
             </div>
-            {/* ...add more cards as needed... */}
           </div>
         </div>
       </div>
