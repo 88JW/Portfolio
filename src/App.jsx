@@ -27,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header language={language} onLanguageChange={handleLanguageChange} translations={translations} />
+      
       <About translations={translations} />
       <Skills translations={translations} />
       <Portfolio translations={translations} />
