@@ -42,6 +42,13 @@ function Portfolio({ translations }) {
                 <p>Board Game Calculator</p>
               </a>
             </div>
+           
+            <div className="portfolio-card">
+              <a href="https://puzle-v2.netlify.app/" target="_blank" rel="noopener noreferrer">
+                <img src="https://d33wubrfki0l68.cloudfront.net/67d7b588e9854d80438f6229/screenshot_2025-03-17-05-39-54-0000.webp" alt="Puzle V2" className="portfolio-card-image" />
+                <p>Puzle V2</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
